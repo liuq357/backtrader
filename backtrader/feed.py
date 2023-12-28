@@ -672,6 +672,7 @@ class CSVDataBase(with_metaclass(MetaCSVDataBase, DataBase)):
                 self.f = self.p.dataname
             else:
                 # Let an exception propagate to let the caller know
+                print(self.p)
                 self.f = io.open(self.p.dataname, 'r')
 
         if self.p.headers:
